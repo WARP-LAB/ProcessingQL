@@ -1,0 +1,10 @@
+Processing Quick Look Plugin
+==============================
+
+The plugin enables user to view the contents of Processing sketches (Processing Development Environment .pde) in Quick Look window. Plugin also enables thumbnail / icon creation, which allows to browse sketches in Cover Flow.
+
+## TO DO: As i'm using Arduino IDE more often than p5 nowadays.. with small changes it can serve as Arduino IDE quick look plugin.
+
+[Compiled version here](http://www.krokoarch.lv/mac/en/processingql/)
+
+![](https://github.com/kroko/ProcessingQL/raw/master/GlobalResources/ICNS/processingql_200dpi.png)

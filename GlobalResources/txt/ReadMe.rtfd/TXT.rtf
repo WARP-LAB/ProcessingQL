@@ -1,0 +1,161 @@
+{\rtf1\ansi\ansicpg1250\cocoartf1038\cocoasubrtf290
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red168\green168\blue168;}
+\vieww7860\viewh16000\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qr\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic processingql_200dpi.png \width3686 \height3686
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qr\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qr\pardirnatural
+
+\f1\fs56 \cf0 Processing\
+
+\f2\b\fs28 Quick Look Plugin\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b0\fs24 \cf0 \
+
+\b The plugin enables user to view the contents of Processing sketches (Processing Development Environment .pde) in Quick Look window. Plugin also enables thumbnail / icon creation, which allows to browse sketches in Cover Flow.
+\b0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b \cf0 Requirements
+\b0 \
+\
+Mac OS 10.5, 10.6 UB 32 & 64-bit\
+\
+
+\b Installation
+\b0 \
+\
+\'95 Copy 
+\i processing.qlgenerator
+\i0  into 
+\i /Libary/QuickLook
+\i0 \
+	or 
+\i ~/Libary/QuickLook
+\i0 .\
+\'95 To reset all generators in 
+\i Terminal.app
+\i0  write 
+\i qlmanage -r\
+
+\i0 \'95 If You have already previous 
+\i processing.qlgenerator
+\i0  installed\
+	- then simply overwrite the old one and\
+		issue 
+\i qlmanage -r
+\i0  command to register the new plugin\
+	- if OS X says that current 
+\i processing.qlgenerator
+\i0  is in use\
+		and thus cannot replace old plugin then issue\
+		
+\i qlmanage -r
+\i0  command, overwrite old plugin and once\
+		again call 
+\i qlmanage -r
+\i0  to register the new plugin.\
+
+\f3 \'95 
+\f2 Before uninstalling (deleting)
+\i  processing.qlgenerator
+\i0 \
+	issue
+\i  qlmanage -r
+\i0  for Quick Look server to release it.\
+\
+
+\b Version history\
+\
+
+\b0 \'95 v.0.2beta\
+06.05.2010.\
+	- Preview in Quick Look with custom display name containing:\
+		> sketch name\
+		> notifier if the currently viewed sketch is the main sketch\
+			for this sketchbook- i.e. 
+\i MySketchName
+\i0  or\
+			
+\i ExtraCode - MySketchName
+\i0 \
+	- Thumbnails for Cover Flow and icons in Finder.app\
+		> image includes all the typical icon decor, such as\
+			shadows and a curled corner.\
+		> there might be cases where icon thumbnail quality\
+			goes out of the window. Hence still beta.\
+		> changed the way thumbnail is drawn (Core Graphics).\
+		> again- haven't made no choices about text scaling\
+			in thumbnails.\
+	- Smart syntax coloring\
+		> notification that there might be a syntax error\
+			(unclosed multiline comments or strings) is removed.\
+	- Custom coloring\
+		> wrote and then again dropped implementation where user \
+			an set colors (for orange,blue, comments, background)\
+			by editing a plist file inside qlgenerator bundle.\
+			Generating prieview and thumbnail as quickly as possible\
+			is the aim. And custom coloring means extra reading\
+			from disk, extra runtime.\
+\
+\'95 v0.1beta\
+22.01.2009.\
+Release candidate:\
+	- Preview in Quick Look with custom display name.\
+	- Thumbnails for Cover Flow and icons in Finder.app\
+		> image includes all the typical icon decor, such as\
+			shadows and a curled corner,\
+		> generated more than 3x faster as in alpha version.\
+	- Smart syntax coloring\
+		> notifies if there might be a syntax error.\
+To do:\
+	- Basically, this is it. I'd happy about some response\
+		from users (if any).\
+	- The code that upon request could be changed is text size for\
+		thumbnails. When browsing sketches in Cover Flow one\
+		cannot exactly see the text because it's to small.  Suggestion\
+		is to make it bigger and crop, so user clearly can see the\
+		beginning of the sketch, which helps to identify the contents.\
+\
+\'95 v0.1alpha\
+20.01.2009.\
+First version for public testing:\
+	- Preview in Quick Look\
+	- Thumbnails for Cover Flow and icons in Finder.app\
+	- syntax coloring\
+To do:\
+	- the syntax coloring applies also to incorrect positions (i.e. in\
+		a variable 
+\i mynewvariable
+\i0  the part 
+\i new
+\i0  is colored although\
+		it shouldn't. I know the reason, working on it ;) .\
+	- // comments in some cases aren't coloured correctly.\
+\
+Processing Quick Look plugin\
+Copyright (C) kroko\
+http://www.krokoarch.lv\
+GPL - GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007\
+Processing \'a9 2004-2010 Ben Fry and Casey Reas and team, 2001-2004 Massachusetts Institute of Technology\
+Used in Processing Quick Look plugin- Typeface "PS" \'a9 Mike Cina\
+Quick Look, Cover Flow \'a9 Apple Inc.\
+\
+    This program is free software: you can redistribute it and/or modify\
+    it under the terms of the GNU General Public License as published by\
+    the Free Software Foundation, either version 3 of the License, or\
+    (at your option) any later version.\
+\
+    This program is distributed in the hope that it will be useful,\
+    but WITHOUT ANY WARRANTY; without even the implied warranty of\
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\
+    See the GNU General Public License for more details.\
+\
+    See http://www.gnu.org/licenses/gpl.html\
+}
